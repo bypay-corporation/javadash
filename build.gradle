@@ -5,6 +5,8 @@ plugins {
 group = 'io.javadash'
 version = '1.0.0'
 
+archivesBaseName = 'java-lodash'
+
 repositories {
     mavenCentral()
 }
