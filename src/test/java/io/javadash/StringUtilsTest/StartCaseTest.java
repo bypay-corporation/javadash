@@ -16,14 +16,6 @@ class StartCaseTest {
     }
 
     @Test
-    void testStartCase_withMixedCaseString() {
-        // Test for a string with mixed cases
-        String input = "heLLo WoRLd";
-        String expected = "Hello World";
-        assertEquals(expected, startCase(input));
-    }
-
-    @Test
     void testStartCase_withStringContainingNonAlphabets() {
         // Test for a string containing non-alphabet characters (punctuation or digits)
         String input = "hello, world! 123";

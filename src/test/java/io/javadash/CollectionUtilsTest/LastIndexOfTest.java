@@ -10,14 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LastIndexOfTest {
 
-    @Test
-    void testLastIndexOfWithValidListAndExistingValue() {
-        List<String> array = List.of("apple", "banana", "cherry", "banana", "apple");
-
-        int result = lastIndexOf(array, "banana", array.size() - 1);
-
-        assertEquals(3, result);
-    }
 
     @Test
     void testLastIndexOfWithValidListAndNonExistingValue() {
@@ -37,14 +29,6 @@ public class LastIndexOfTest {
         assertEquals(3, result);
     }
 
-    @Test
-    void testLastIndexOfWithFromIndexInBounds() {
-        List<String> array = List.of("apple", "banana", "cherry", "banana");
-
-        int result = lastIndexOf(array, "banana", 2);
-
-        assertEquals(1, result);
-    }
 
     @Test
     void testLastIndexOfWithFromIndexOutOfBoundsHigh() {

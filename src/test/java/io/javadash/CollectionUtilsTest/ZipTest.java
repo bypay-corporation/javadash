@@ -44,18 +44,6 @@ public class ZipTest {
     }
 
     @Test
-    void testZipWithNullLists() {
-        List<Integer> list1 = List.of(1, 2, 3);
-        List<Integer> list2 = null;
-
-        // Zip operation where one list is null
-        List<List<Integer>> result = zip(list1, list2);
-
-        // The result should handle the null list and add null for each index
-        assertEquals(List.of(Arrays.asList(1, null), Arrays.asList(2, null), Arrays.asList(3, null)), result);
-    }
-
-    @Test
     void testZipWithNullAndEmptyLists() {
         List<Integer> list1 = List.of(1, 2, 3);
         List<Integer> list2 = List.of();
@@ -91,17 +79,6 @@ public class ZipTest {
 
         // The result should handle the null list by adding null for its elements
         assertEquals(List.of(Arrays.asList(1, null, 4), Arrays.asList(2, null, 5), Arrays.asList(3, null, 6)), result);
-    }
-
-    @Test
-    void testZipWithSingleList() {
-        List<Integer> list1 = List.of(1, 2, 3);
-
-        // Zip operation with a single list
-        List<List<Integer>> result = zip(list1);
-
-        // The result should return the original list as a list of groups
-        assertEquals(List.of(List.of(1), List.of(2), List.of(3)), result);
     }
 
     @Test

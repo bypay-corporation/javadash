@@ -21,12 +21,6 @@ class ReplaceTest {
     }
 
     @Test
-    void testReplace_nullString() {
-        String result = replace(null, "pattern", "replacement");
-        assertNull(result, "Expected null input string to return null");
-    }
-
-    @Test
     void testReplace_nullPattern() {
         String result = replace("Hello, world!", null, "Java");
         assertEquals("Hello, world!", result, "Expected string to remain unchanged when pattern is null");

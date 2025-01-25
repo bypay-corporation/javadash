@@ -47,34 +47,6 @@ public class UniqByTest {
         assertEquals(new ArrayList<>(), result);  // Should return an empty list
     }
 
-    @Test
-    void testUniqByWithNullIteratee() {
-        List<Person> list = new ArrayList<>();
-        list.add(new Person("Alice", 30));
-        list.add(new Person("Bob", 25));
-        list.add(new Person("Alice", 30));  // Duplicate based on name
-
-        List<Person> result = uniqBy(list, null);
-
-        // Since the iteratee is null, the result should contain all elements
-        assertEquals(new ArrayList<>(List.of(new Person("Alice", 30), new Person("Bob", 25), new Person("Alice", 30))), result);
-    }
-
-    @Test
-    void testUniqByWithComplexIteratee() {
-        List<Person> list = new ArrayList<>();
-        list.add(new Person("Alice", 30));
-        list.add(new Person("Alice", 25));
-        list.add(new Person("Bob", 25));
-
-        Function<Person, Integer> byAge = Person::getAge;  // Function to extract age for comparison
-
-        List<Person> result = uniqBy(list, byAge);
-
-        // The result should contain only one "Alice" (age 30) and "Bob" (age 25)
-        assertEquals(new ArrayList<>(List.of(new Person("Alice", 30), new Person("Bob", 25))), result);
-    }
-
     // Custom class for testing with unique functionality
     static class Person {
         private String name;

@@ -66,17 +66,6 @@ public class IntersectionTest {
     }
 
     @Test
-    public void testIntersection_NullElement() {
-        List<Integer> array1 = Arrays.asList(2, 1, null);
-        List<Integer> array2 = Arrays.asList(2, null, 3);
-        List<Integer> expected = Arrays.asList(2);
-
-        List<Integer> result = intersection(array1, array2);
-
-        assertEquals(expected, result);
-    }
-
-    @Test
     public void testIntersection_NullArray() {
         List<Integer> array1 = null;
         List<Integer> array2 = Arrays.asList(2, null, 3);

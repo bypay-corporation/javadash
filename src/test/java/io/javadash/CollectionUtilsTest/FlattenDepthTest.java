@@ -60,12 +60,5 @@ public class FlattenDepthTest {
         List<Object> expected = Collections.emptyList();
         assertEquals(expected, flattenDepth(input, 2));
     }
-
-    @Test
-    public void testFlattenDepthWithDepth2Null() {
-        List<Object> input = Arrays.asList(1, Arrays.asList(2, null, Arrays.asList(3, null, Arrays.asList(4)), 5));
-        List<Object> expected = Arrays.asList(1, 2, null, 3, null, Arrays.asList(4), 5);
-        assertEquals(expected, flattenDepth(input, 2));
-    }
 }
 

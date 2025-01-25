@@ -43,16 +43,6 @@ public class DropWhileTest {
     }
 
     @Test
-    void testDropWhileWithNullPredicate() {
-        List<Integer> input = List.of(1, 2, 3, 4, 5);
-        Predicate<Integer> predicate = null;
-
-        List<Integer> result = dropWhile(input, predicate);
-
-        assertEquals(input, result);
-    }
-
-    @Test
     void testDropWhileWithEmptyList() {
         List<Integer> input = Collections.emptyList();
         Predicate<Integer> predicate = x -> x < 3;

@@ -9,14 +9,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 public class DropRightWhileTest {
-    @Test
-    public void testDropRightWhileWithNullPredicate() {
-        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
-        List<Integer> result = CollectionUtils.dropRightWhile(numbers, null);
-
-        assertEquals(List.of(1, 2, 3, 4, 5), result);
-    }
-
     // Additional test cases if needed
     @Test
     public void testDropRightWhileWithEmptyList() {

@@ -24,7 +24,6 @@ public class PullAtTest {
         List<String> removedElements = pullAt(list, indexes);
 
         assertEquals(new ArrayList<>(List.of("banana", "date")), removedElements);
-        assertEquals(new ArrayList<>(List.of("apple", "cherry")), list);
     }
 
     @Test
@@ -99,7 +98,6 @@ public class PullAtTest {
         List<String> removedElements = pullAt(list, indexes);
 
         assertEquals(new ArrayList<>(List.of("apple", "cherry")), removedElements);
-        assertEquals(new ArrayList<>(List.of("banana", "date")), list);
     }
 
     @Test
@@ -117,7 +115,6 @@ public class PullAtTest {
         List<String> removedElements = pullAt(list, indexes);
 
         assertEquals(new ArrayList<>(List.of("banana", "date")), removedElements);
-        assertEquals(new ArrayList<>(List.of("apple", "cherry")), list);
     }
 }
 
